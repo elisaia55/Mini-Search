@@ -1,0 +1,23 @@
+.scroll-to-top {
+    
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin: auto;
+}
+
+.scroll-to-top:hover{
+    cursor: pointer;
+}
+
+.scroll-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+}

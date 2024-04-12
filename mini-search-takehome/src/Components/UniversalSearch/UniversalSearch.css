@@ -1,0 +1,304 @@
+.page-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.hidden {
+    display: none;
+}
+
+.input-field-container {
+    position: relative;
+    display: flex;
+    
+    align-items: baseline;
+}
+
+.search-icon {
+    position: relative;
+    right:20px;
+    top:10px;
+}
+
+.text-field-btn-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 250px;
+    left: 22px;
+
+   
+}
+
+.giphy-results-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.giphy-imgs {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+   width: 200px;
+  height: 200px;
+  padding: 5px;
+transition: 0.4s;
+}
+
+.giphy-imgs:hover {
+    
+    transform: scale(1.048);
+}
+
+
+.result-wrapper {
+    position: relative;
+    display: grid;
+    align-items: baseline;
+    grid-auto-flow: column;
+    gap: 220px;
+    top: 300px;
+    justify-content: center;
+    width: 100%;
+    right: 80px;
+    
+ 
+}
+
+/* .results-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    max-height: 450px;
+    
+    
+} */
+
+
+
+
+
+
+.gif-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#giphy_title, #wiki_title, #nba_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #333133;
+    
+    
+}
+
+
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    
+}
+
+/* .clear-btn, .search-btn {
+    margin: 18px !important;
+} */
+
+
+/* NBA result styling */
+.nba-container {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.nba-results-container {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(205, 205, 205, 0.187);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.nba-results-container h3 {
+    position: relative;
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    bottom: 20px;
+    margin-bottom: -12px;
+}
+
+.nba-results-container p {
+    color: rgb(18, 18, 18);
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+.nba-names {
+    display: flex;
+    text-align: center;
+    font-size: 22px;
+    flex-direction: column;
+}
+
+
+
+
+.player-stat-p {
+    display: flex;
+    font-size: 16px;
+}
+
+/* Wikipedia result styling */
+
+.wiki-results-container{
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.wiki-results-container a {
+    text-decoration: none;
+}
+
+.wiki-results {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(205, 205, 205, 0.187);
+    border-radius: 10px;
+    transition: .2s;
+}
+
+
+.wiki-results:hover {
+    box-shadow: 3px 3px 6px  #1976d23f;;
+    transform: scale(1.01);
+    
+}
+
+.wiki-results h3 {
+    position: relative;
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    bottom: 20px;
+    margin-bottom: -12px;
+    
+
+}
+
+.wiki-results p {
+    color: rgb(18, 18, 18);
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.wiki-results p .searchmatch {
+    font-weight: 700;
+    color: #1976d2;
+}
+
+.card-icon {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    
+}
+
+.app-bar-header {
+    box-shadow: none !important;
+}
+
+.no-results-p {
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+}
+
+.no-results-p p {
+    font-weight: 100;
+}
+
+.no-results-p span {
+    color: #1976d2;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .text-field-btn-container, .btn-container{
+        top: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .result-wrapper {
+      /* Stack the children elements vertically */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center-align the child elements */
+      gap: 20px; /* Add some space between child elements */
+      padding: 10px; /* Add some padding around the content */
+      top: 0;
+      left: 0;
+      position: relative; /* Reset any absolute positioning */
+    }
+  
+    /* Make sure all child containers of result-wrapper take the full width and do not overlap */
+    .results-container,
+    .giphy-container,
+    .nba-container,
+    .wiki-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      width: 100%; /* Full width to prevent overlap */
+    }
+  
+    /* Ensure the paragraphs have enough space and do not overlap with images */
+    .wiki-results p,
+    .nba-names,
+    .giphy-imgs {
+      margin: 10px 0; /* Add vertical margin for spacing */
+      width: auto; /* Ensure the width is auto so they take up the necessary space and do not overlap */
+      word-wrap: break-word; /* Prevent long text strings from overflowing */
+    }
+  
+    /* If images are still overlapping, you can adjust their size or the grid layout */
+    .giphy-imgs {
+        display: flex;
+    justify-content: center;
+    object-fit: cover;
+   width: 200px;
+  height: 200px;/* Keep the aspect ratio */
+    }
+  
+    .no-results-p {
+        display: flex;
+        height: 115px;
+    }
+  }
