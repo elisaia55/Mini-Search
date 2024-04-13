@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     
 }
 
@@ -63,11 +64,11 @@ transition: 0.4s;
     display: grid;
     align-items: baseline;
     grid-auto-flow: column;
-    gap: 220px;
+    gap: 180px;
     top: 300px;
     justify-content: center;
     width: 100%;
-    right: 80px;
+    
     
  
 }

@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '../../Images/logo.png'
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
 

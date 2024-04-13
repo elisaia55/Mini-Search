@@ -7,7 +7,6 @@ import InfoIcon from "@mui/icons-material/Info";
 
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import Background from "../../Images/logo.png";
 import { Stack } from "@mui/system";
 
 import "./UniversalSearch.css";
