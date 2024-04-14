@@ -3,9 +3,14 @@
     color: var(--main_font_color) !important;
 }
 
-[label="Search Here"] {
+form label {
     color: var(--main_font_color) !important;
 }
+
+ #fullWidth::after {
+    border-bottom: 2px solid var(--main_font_color) !important;
+}       
+
 .main-title {
     color: var(--main_font_color);
 }
@@ -86,18 +91,17 @@ transition: 0.4s;
  
 }
 
-/* .results-container {
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    
-    max-height: 450px;
-    
-    
-} */
+.btn-container button {
+    background-color: var(--button_color);
+    color: var(--button_font_color) !important;
+    transition: .3s;
+}
+
+.btn-container button:hover {
+    background-color: var(--secondary_font_color) !important;
 
 
+}
 
 
 
@@ -135,7 +139,7 @@ transition: 0.4s;
 /* NBA result styling */
 .nba-container {
     max-width: 440px;
-    margin: 0 auto;
+    margin-right: 50px;
 }
 
 .nba-results-container {
@@ -186,7 +190,7 @@ transition: 0.4s;
 
 .wiki-results-container{
     max-width: 440px;
-    margin: 0 auto;
+    margin-left: 50px;
 }
 
 .wiki-results-container a {
@@ -207,10 +211,11 @@ transition: 0.4s;
 
 
 .wiki-results:hover {
-    box-shadow: 3px 3px 6px  #1976d23f;;
+    box-shadow: 3px 3px 6px  var(--main_font_color);
     transform: scale(1.01);
     
 }
+
 
 .wiki-results h3 {
     position: relative;

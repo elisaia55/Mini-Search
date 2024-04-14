@@ -18,6 +18,12 @@
     cursor: pointer;
 }
 
+.nav-title {
+    display: flex;
+    width: 150px;
+    color: var(--main_font_color);
+}
+
 .scroll-btn-container {
     width: 100%;
     display: flex;

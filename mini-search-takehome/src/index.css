@@ -8,7 +8,8 @@
   --main_font_color:rgba(0, 0, 0, 0.87);
   --secondary_font_color: rgba(0, 0, 0, 0.6);
   --search_font_color:#005f87;
-
+  --button_color:rgba(0, 0, 0, 0.54);
+--button_font_color:rgba(255, 255, 255, 0.7); 
   
 }
 
@@ -19,6 +20,10 @@
   --main_font_color: white;
   --secondary_font_color:rgba(255, 255, 255, 0.7);
   --search_font_color: #5f8787;
+  --button_color:#fff;
+   --button_font_color:rgba(0, 0, 0, 0.87);
+
+
 
   height: 100%;
   width: 100%;

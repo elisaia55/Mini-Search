@@ -74,7 +74,10 @@ const toggleTheme = (e) => {
           
           <div className='nav-container'>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{color:"black", fontWeight:"600"}}>
-            Mini Search
+           <p className='nav-title'>
+            
+             Mini Search
+            </p>
             
           </Typography>
             <div className='scroll-btn-container'>

@@ -117,6 +117,7 @@ function UniversalSearch() {
           autoComplete="off"
         >
           <TextField
+         
             id="fullWidth"
             label="Search Here"
             variant="standard"
