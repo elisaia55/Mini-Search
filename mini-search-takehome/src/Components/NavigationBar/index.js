@@ -8,9 +8,37 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
+import { ReactComponent as Sun } from '../../Images/Sun.svg';
+import { ReactComponent as Moon} from '../../Images/Moon.svg'
 
 export default function ButtonAppBar() {
     const [isVisible, setIsVisible] = useState(false)
+
+
+
+    const setDarkMode = () => {
+      document.querySelector("body").setAttribute('data-theme', 'dark');
+      localStorage.setItem('colorSelected', "dark")
+    }
+
+    const setLightMode = () => {
+      document.querySelector("body").setAttribute('data-theme', 'light');
+      localStorage.setItem('colorSelected', "light")
+
+    }
+
+    const colorSelected = localStorage.getItem('colorSelected')
+
+    if (colorSelected === "dark") {
+      setDarkMode()
+    }
+
+const toggleTheme = (e) => {
+  if (e.target.checked) setDarkMode()
+  else setLightMode()
+}
+
+    
 
     const showButton = () => {
         if (window.pageYOffset > 300) {
@@ -41,7 +69,7 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
         <div className='app-bar-header'>
 
-      <AppBar position="fixed" >
+      <AppBar position="fixed" className='top-nav' >
         <Toolbar>
           
           <div className='nav-container'>
@@ -56,7 +84,19 @@ export default function ButtonAppBar() {
               )}
               </div>
           
-          <Button color="inherit">Login</Button>
+              <div className='dark_mode'>
+            <input
+                className='dark_mode_input'
+                type='checkbox'
+                id='darkmode-toggle'
+                onChange={toggleTheme}
+                defaultChecked={colorSelected === "dark"}
+            />
+            <label className='dark_mode_label' for='darkmode-toggle'>
+                <Sun />
+                <Moon />
+            </label>
+        </div>
           </div>
         </Toolbar>
       </AppBar>

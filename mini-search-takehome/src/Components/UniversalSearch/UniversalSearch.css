@@ -1,3 +1,15 @@
+
+[type="text"] {
+    color: var(--main_font_color) !important;
+}
+
+[label="Search Here"] {
+    color: var(--main_font_color) !important;
+}
+.main-title {
+    color: var(--main_font_color);
+}
+
 .page-container{
     
     display: flex;
@@ -5,6 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    
     
 }
 
@@ -99,7 +112,7 @@ transition: 0.4s;
     align-items: center;
     justify-content: center;
     gap: 9px;
-    color: #333133;
+    color: var(--main_font_color);
     
     
 }
@@ -137,14 +150,14 @@ transition: 0.4s;
 
 .nba-results-container h3 {
     position: relative;
-    color: rgb(26, 26, 26);
+    color: var(--main_font_color);
     font-size: 22px;
     bottom: 20px;
     margin-bottom: -12px;
 }
 
 .nba-results-container p {
-    color: rgb(18, 18, 18);
+    color: var(--secondary_font_color);
     font-size: 16px;
     margin-bottom: 16px;
 }
@@ -180,6 +193,8 @@ transition: 0.4s;
     text-decoration: none;
 }
 
+
+
 .wiki-results {
     position: relative;
     width: 100%;
@@ -199,7 +214,7 @@ transition: 0.4s;
 
 .wiki-results h3 {
     position: relative;
-    color: rgb(26, 26, 26);
+    color: var(--main_font_color);
     font-size: 22px;
     bottom: 20px;
     margin-bottom: -12px;
@@ -207,15 +222,15 @@ transition: 0.4s;
 
 }
 
-.wiki-results p {
-    color: rgb(18, 18, 18);
+.wiki-results p  {
+    color: var(--secondary_font_color);
     font-size: 16px;
     margin-bottom: 16px;
 }
 
 .wiki-results p .searchmatch {
     font-weight: 700;
-    color: #1976d2;
+    color: var(--search_font_color);
 }
 
 .card-icon {

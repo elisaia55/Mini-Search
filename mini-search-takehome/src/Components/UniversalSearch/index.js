@@ -63,7 +63,7 @@ function UniversalSearch() {
   const giphySearch = async () => {
     if (!searchQuery) return;
     try {
-      const url = `https://api.giphy.com/v1/gifs/search?api_key=${giphyAPIKEY}&q=${searchQuery}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+      const url = `https://api.giphy.com/v1/gifs/search?api_key=${giphyAPIKEY}&q=${searchQuery}&limit=22&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
       const response = await fetch(url);
       
       if (!response.ok) {
@@ -106,7 +106,7 @@ function UniversalSearch() {
   return (
     <div className="page-container">
       <div className="text-field-btn-container">
-        <h1>Mini Search</h1>
+        <h1 className="main-title">Mini Search</h1>
         <Box
           component="form"
           sx={{
