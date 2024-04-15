@@ -1,18 +1,38 @@
 .top-nav {
     background-color: var(--body_background) !important;
+    box-shadow: none !important;
+    height: 100;
 }
 
 /* Back to Top Button styling */
 
 .scroll-to-top {
-    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     border: none;
     background: none;
     font-weight: 600;
     font-size: 14px;
     margin: auto;
     color: var(--main_font_color);
+    top: 1140px;
+    border-radius: 8px;
+    
+    background-color: var(--body_color);
+    align-items: center;
+    opacity: 90%;
 }
+
+
+.scroll-to-top span {
+    position: relative;
+
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+
 
 .scroll-to-top:hover{
     cursor: pointer;
@@ -25,6 +45,7 @@
 }
 
 .scroll-btn-container {
+    
     width: 100%;
     display: flex;
     justify-content: center;

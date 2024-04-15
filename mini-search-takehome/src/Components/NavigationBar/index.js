@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
 import { ReactComponent as Sun } from '../../Images/Sun.svg';
@@ -69,7 +70,7 @@ const toggleTheme = (e) => {
     <Box sx={{ flexGrow: 1 }}>
         <div className='app-bar-header'>
 
-      <AppBar position="fixed" className='top-nav' >
+      <AppBar position="fixed" className='top-nav'  >
         <Toolbar>
           
           <div className='nav-container'>
@@ -80,12 +81,12 @@ const toggleTheme = (e) => {
             </p>
             
           </Typography>
-            <div className='scroll-btn-container'>
+            {isVisible && ( <div className='scroll-btn-container'>
 
-          {isVisible && (
-              <button onClick={topScroll} className="scroll-to-top">Back To Top</button>
-              )}
-              </div>
+         
+              <button onClick={topScroll} className="scroll-to-top"><KeyboardDoubleArrowUpIcon sx={{fontSize: 40}}></KeyboardDoubleArrowUpIcon><span>Back to Top</span></button>
+             
+              </div> )}
           
               <div className='dark_mode'>
             <input
