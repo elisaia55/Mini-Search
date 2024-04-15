@@ -74,7 +74,7 @@ const toggleTheme = (e) => {
         <Toolbar>
           
           <div className='nav-container'>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{color:"black", fontWeight:"600"}}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{color:"#171717", fontWeight:"600"}}>
            <p className='nav-title'>
             
              Mini Search

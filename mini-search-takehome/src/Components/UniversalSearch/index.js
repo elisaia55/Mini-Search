@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import GifIcon from "@mui/icons-material/Gif";
 import InfoIcon from "@mui/icons-material/Info";
 import ClearIcon from "@mui/icons-material/Clear";
+import { Tooltip } from "@mui/material";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 
 import { Stack } from "@mui/system";
@@ -104,11 +105,6 @@ function UniversalSearch() {
     }
   };
 
-    const styleSearch = {
-      "&:active":{
-        borderBottom: "none"
-      }
-    }
   
 
   return (
@@ -121,6 +117,7 @@ function UniversalSearch() {
               sx={{
                 width: 500,
                 maxWidth: "100%",
+                
               }}
               noValidate
               autoComplete="off"
@@ -146,26 +143,44 @@ function UniversalSearch() {
                 
               /> }
             </Box>
-          </div>
+          
 
           <div className="btn-container">
             <Box>
-              <Stack spacing={5} direction="row">
-                <Button
-                  className="search-btn"
-                  spacing={2}
-                  variant="contained"
-                  color="primary"
-                  onClick={searchAll}
-                  size="large"
-                >
-                  Search
-                </Button>
-              </Stack>
+            <Stack spacing={5} direction="row">
+      {searchQuery ? (
+        <Button
+          className="search-btn"
+          spacing={2}
+          variant="contained"
+          color="primary"
+          onClick={searchAll}
+          size="large"
+        >
+          Search
+        </Button>
+      ) : (
+        <Tooltip title="Search Field is Empty">
+          <span>
+            <Button
+              className="search-btn"
+              spacing={2}
+              variant="contained"
+              color="primary"
+              onClick={searchAll}
+              size="large"
+              disabled={!searchQuery}
+            >
+              Search
+            </Button>
+          </span>
+        </Tooltip>
+      )}
+    </Stack>
             </Box>
           </div>
         </div>
-
+</div>
         {wikiResults[0]?.pageid === 59351 || wikiResults.length < 0 ? (
           <h2 className="no-results-p">
             <p>Sorry, No results found for </p>
@@ -189,7 +204,7 @@ function UniversalSearch() {
                       target="__blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="wiki-results" key={index}>
+                      <div className="wiki-results" key={item.pageid}>
                         <h3>{item.title}</h3>
                         <p
                           dangerouslySetInnerHTML={{ __html: item.snippet }}
@@ -210,7 +225,7 @@ function UniversalSearch() {
               </h2>
               <div className="giphy-results-container">
                 {giphyResults.map((item, index) => (
-                  <div key={index}>
+                  <div key={item.id}>
                     <a
                       href={item.url}
                       target="_blank"
@@ -238,7 +253,7 @@ function UniversalSearch() {
                 <div className="results-container">
                   {nbaResults.length > 0 ? (
                     nbaResults.slice(0, 10).map((player, index) => (
-                      <div className="nba-results-container" key={index}>
+                      <div className="nba-results-container" key={player.id}>
                         <h3 className="nba-names">
                           {player.firstname} {player.lastname}
                         </h3>

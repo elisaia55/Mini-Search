@@ -8,14 +8,14 @@
   --main_font_color:rgba(0, 0, 0, 0.87);
   --secondary_font_color: rgba(0, 0, 0, 0.6);
   --search_font_color:#005f87;
-  --button_color:rgba(0, 0, 0, 0.54);
+  --button_color:rgb(0, 0, 0);
 --button_font_color:rgba(255, 255, 255, 0.7); 
   
 }
 
 [data-theme="dark"] {
-  --body_background: #121212;
-  --body_color: rgb(23, 23, 23);
+  --body_background: #171717;
+  --body_color: #171717;
   --link_color: cyan;
   --main_font_color: white;
   --secondary_font_color:rgba(255, 255, 255, 0.7);

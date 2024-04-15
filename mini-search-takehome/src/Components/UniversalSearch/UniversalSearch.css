@@ -12,6 +12,7 @@ form label {
 
 ::after {
     border-bottom: 1px var(--button_color) solid !important;
+    
 }
 
 .main-title {
@@ -93,8 +94,9 @@ form label {
 
 .search-clear-btn-container {
     display: flex;
-    
-    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 form {
@@ -109,7 +111,11 @@ form svg {
 }
 
 .clear-btn {
+    position: relative;
+    display: flex;
     color: var(--button_color);
+    background-color: transparent;
+    transform: none;
 }
 
 .btn-container button {
@@ -144,6 +150,10 @@ form svg {
   display: flex;
   justify-content: center;
   margin: 10px 10px 10px 10px;
+}
+
+button[disabled] {
+    pointer-events: auto;
 }
 
 /* NBA result styling */
@@ -189,14 +199,14 @@ form svg {
 }
 
 .no-result-nba {
-    color: var(--main_font_color);
+    color: #1976d2;
 }
 .nba-no-result-container {
     font-size: 22px;
 }
 
 .nba-no-result-container p {
-    color: var(sec);
+    color: var(--main_font_color);
 }
 
 /* Wikipedia result styling */
