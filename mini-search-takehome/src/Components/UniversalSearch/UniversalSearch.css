@@ -111,7 +111,7 @@ form svg {
 }
 
 .clear-btn {
-    position: relative;
+    
     display: flex;
     color: var(--button_color);
     background-color: transparent;
@@ -123,7 +123,7 @@ form svg {
   background-color: var(--button_color);
   color: var(--button_font_color) !important;
   transition: 0.3s;
-  width: 503px;
+  width: 500px;
 }
 
 .btn-container button:hover {
@@ -294,8 +294,12 @@ button[disabled] {
     .search-clear-btn-container {
       display: flex;
       flex-direction: column;
-      width: 470px;
+      width: 325px;
       align-items: center;
+  }
+
+  .btn-container button {
+    width: 325px;
   }
 
   .text-field-btn-container,
@@ -316,6 +320,10 @@ button[disabled] {
     position: relative; 
   }
 
+  .wiki-results {
+    width: 250px;
+  }
+
   .results-container,
   .giphy-container,
   .nba-container,
@@ -323,7 +331,7 @@ button[disabled] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    
   }
 
  
@@ -331,7 +339,7 @@ button[disabled] {
   .nba-names,
   .giphy-imgs {
     margin: 10px 0; 
-    width: auto;
+    
     word-wrap: break-word; 
   }
 
@@ -340,7 +348,7 @@ button[disabled] {
     display: flex;
     justify-content: center;
     object-fit: cover;
-    width: 200px;
+    width: 150px;
     height: 200px; 
   }
 
