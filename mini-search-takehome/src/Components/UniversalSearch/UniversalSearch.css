@@ -10,8 +10,8 @@ form label {
   color: var(--secondary_font_color) !important;
 }
 
-#fullWidth::after {
-  border-bottom: 2px solid var(--main_font_color) !important;
+::after {
+    border-bottom: 1px var(--button_color) solid !important;
 }
 
 .main-title {

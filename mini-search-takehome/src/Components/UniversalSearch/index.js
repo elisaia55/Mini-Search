@@ -6,7 +6,7 @@ import GifIcon from "@mui/icons-material/Gif";
 import InfoIcon from "@mui/icons-material/Info";
 import ClearIcon from "@mui/icons-material/Clear";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+
 import { Stack } from "@mui/system";
 
 import "./UniversalSearch.css";
@@ -104,6 +104,13 @@ function UniversalSearch() {
     }
   };
 
+    const styleSearch = {
+      "&:active":{
+        borderBottom: "none"
+      }
+    }
+  
+
   return (
     <div className="page-container">
       <div className="search-results-container">
@@ -120,6 +127,7 @@ function UniversalSearch() {
             >
               <TextField
                 id="fullWidth"
+                sx={{}}
                 label="Search Here"
                 variant="standard"
                 type="text"
