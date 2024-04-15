@@ -3,16 +3,14 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
 import { ReactComponent as Sun } from '../../Images/Sun.svg';
 import { ReactComponent as Moon} from '../../Images/Moon.svg'
-import { fontSize } from '@mui/system';
+
 
 export default function ButtonAppBar() {
     const [isVisible, setIsVisible] = useState(false)

@@ -285,17 +285,20 @@ button[disabled] {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
     .search-results-container{
         position: relative;
         top: 105px;
     }
+
+
 
   .text-field-btn-container,
   .btn-container {
     top: 0;
     display: flex;
     justify-content: center;
+    width: 380px;
   }
   .result-wrapper {
     /* Stack the children elements vertically */
