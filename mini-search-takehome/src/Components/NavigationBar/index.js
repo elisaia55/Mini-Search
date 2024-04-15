@@ -7,10 +7,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
 import { ReactComponent as Sun } from '../../Images/Sun.svg';
 import { ReactComponent as Moon} from '../../Images/Moon.svg'
+import { fontSize } from '@mui/system';
 
 export default function ButtonAppBar() {
     const [isVisible, setIsVisible] = useState(false)
@@ -72,7 +74,6 @@ const toggleTheme = (e) => {
 
       <AppBar position="fixed" className='top-nav'  >
         <Toolbar>
-          
           <div className='nav-container'>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{color:"#171717", fontWeight:"600"}}>
            <p className='nav-title'>
@@ -80,14 +81,17 @@ const toggleTheme = (e) => {
              Mini Search
             </p>
             
+           
           </Typography>
+          
             {isVisible && ( <div className='scroll-btn-container'>
 
          
               <button onClick={topScroll} className="scroll-to-top"><KeyboardDoubleArrowUpIcon sx={{fontSize: 40}}></KeyboardDoubleArrowUpIcon><span>Back to Top</span></button>
              
               </div> )}
-          
+            
+    
               <div className='dark_mode'>
             <input
                 className='dark_mode_input'
@@ -95,13 +99,18 @@ const toggleTheme = (e) => {
                 id='darkmode-toggle'
                 onChange={toggleTheme}
                 defaultChecked={colorSelected === "dark"}
-            />
+                />
             <label className='dark_mode_label' for='darkmode-toggle'>
                 <Sun />
                 <Moon />
             </label>
         </div>
           </div>
+          
+                <a href='https://github.com/elisaia55/Mini-Search' target="__blank" rel="noopener noreferrer">
+
+                <GitHubIcon style={{color: "black"}} sx={{fontSize: 29, padding:"12px"}} ></GitHubIcon>
+                </a>
         </Toolbar>
       </AppBar>
               </div>
