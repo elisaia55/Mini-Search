@@ -1,9 +1,21 @@
-# Mini Search
 
- Mini Search is a front-end project that utilizes multiple API calls within one search. Wikipedia, GIPHY, and API-NBA are the three API's used within the application. 
+<h1 align="center">Welcome to Mini-Search 👋</h1>
 
-Live Link : 
-[Mini Search](https://search-mini.vercel.app/)
+
+> A search engine utilizing 3 APIs (Wikipedia, GIPHY, NBA-rapid-api)
+
+### ✨ [Demo](https://search-mini.vercel.app/)
+
+
+
+## Author
+
+👤 **Augustino Elisaia**
+
+* Website: http://aelisaia.io/
+* Github: [@elisaia55](https://github.com/elisaia55)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/augustinoelisaia\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/augustinoelisaia\/)
+
 
 
 ## Technologies Used: 
