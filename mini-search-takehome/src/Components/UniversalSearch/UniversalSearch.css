@@ -291,6 +291,13 @@ button[disabled] {
         top: 105px;
     }
 
+    .search-clear-btn-container {
+      display: flex;
+      flex-direction: column;
+      width: 470px;
+      align-items: center;
+  }
+
   .text-field-btn-container,
   .btn-container {
     top: 0;

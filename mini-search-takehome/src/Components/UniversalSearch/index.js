@@ -19,6 +19,7 @@ function UniversalSearch() {
   const [nbaResults, setNbaResults] = useState([]);
   const [giphyResults, setGiphyResults] = useState([]);
   const [searchPerformed, setSearchPerformed] = useState(false);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true)
 
   // Wikipedia API Search Logic
   const wikiSearch = async () => {
@@ -97,7 +98,14 @@ function UniversalSearch() {
     setSearchPerformed(false);
   };
 
-  const handleSearchChange = (e) => setSearchQuery(e.target.value);
+  const handleSearchChange = (e) => {
+    let inpVal = e.target.value;
+    if (inpVal.startsWith(' ')) {
+      inpVal = inpVal.trimStart();
+    }
+    setSearchQuery(inpVal);
+    setIsBtnDisabled(!inpVal.trim().length)
+  }
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -169,7 +177,7 @@ function UniversalSearch() {
               color="primary"
               onClick={searchAll}
               size="large"
-              disabled={!searchQuery}
+              disabled={!searchQuery || isBtnDisabled}
             >
               Search
             </Button>

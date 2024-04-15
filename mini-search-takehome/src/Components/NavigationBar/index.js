@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css"
@@ -85,7 +85,7 @@ const toggleTheme = (e) => {
             {isVisible && ( <div className='scroll-btn-container'>
 
          
-              <button onClick={topScroll} className="scroll-to-top"><KeyboardDoubleArrowUpIcon sx={{fontSize: 40}}></KeyboardDoubleArrowUpIcon><span>Back to Top</span></button>
+              <button onClick={topScroll} className="scroll-to-top"><KeyboardArrowUpIcon sx={{fontSize: 30}}></KeyboardArrowUpIcon><span>Back to Top</span></button>
              
               </div> )}
             

@@ -4,37 +4,34 @@
     height: 100;
 }
 
-.git-container {
-   
-    
-}
+
 
 /* Back to Top Button styling */
 
 .scroll-to-top {
-    position: absolute;
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    border: none;
-    background: none;
-    font-weight: 600;
-    font-size: 14px;
-    margin: auto;
+align-items: center;    
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+    font-weight: 400;
+    font-size: 13px;
     color: var(--main_font_color);
-    top: 1140px;
-    border-radius: 8px;
     
     background-color: var(--body_color);
-    align-items: center;
-    opacity: 90%;
+    
+    
 }
 
 
 .scroll-to-top span {
     position: relative;
 
-    font-size: 12px;
-    padding-bottom: 5px;
+   
+    
 }
 
 
