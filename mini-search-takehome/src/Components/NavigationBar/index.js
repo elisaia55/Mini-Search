@@ -107,7 +107,7 @@ const toggleTheme = (e) => {
           
                 <a href='https://github.com/elisaia55/Mini-Search' target="__blank" rel="noopener noreferrer">
 
-                <GitHubIcon style={{color: "black"}} sx={{fontSize: 29, padding:"12px"}} ></GitHubIcon>
+                <GitHubIcon style={{color: "var(--button_color)"}} sx={{fontSize: 29, padding:"12px"}} ></GitHubIcon>
                 </a>
         </Toolbar>
       </AppBar>
