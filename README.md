@@ -17,12 +17,6 @@
 * LinkedIn: [@https:\/\/www.linkedin.com\/in\/augustinoelisaia\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/augustinoelisaia\/)
 
 
-***
- Mini Search is a front-end project that utilizes multiple API calls within one search. Wikipedia, GIPHY, and API-NBA are the three API's used within the application. 
-
-Live Link : 
-[Mini Search](https://search-mini.vercel.app/)
-
 
 ## Technologies Used: 
 * ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
