@@ -298,18 +298,17 @@ button[disabled] {
     justify-content: center;
   }
   .result-wrapper {
-    /* Stack the children elements vertically */
+    
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center-align the child elements */
-    gap: 20px; /* Add some space between child elements */
-    padding: 10px; /* Add some padding around the content */
+    align-items: center; 
+    gap: 20px;
+    padding: 10px; 
     top: 0;
     left: 0;
-    position: relative; /* Reset any absolute positioning */
+    position: relative; 
   }
 
-  /* Make sure all child containers of result-wrapper take the full width and do not overlap */
   .results-container,
   .giphy-container,
   .nba-container,
@@ -317,25 +316,25 @@ button[disabled] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Full width to prevent overlap */
+    width: 100%; 
   }
 
-  /* Ensure the paragraphs have enough space and do not overlap with images */
+ 
   .wiki-results p,
   .nba-names,
   .giphy-imgs {
-    margin: 10px 0; /* Add vertical margin for spacing */
-    width: auto; /* Ensure the width is auto so they take up the necessary space and do not overlap */
-    word-wrap: break-word; /* Prevent long text strings from overflowing */
+    margin: 10px 0; 
+    width: auto;
+    word-wrap: break-word; 
   }
 
-  /* If images are still overlapping, you can adjust their size or the grid layout */
+
   .giphy-imgs {
     display: flex;
     justify-content: center;
     object-fit: cover;
     width: 200px;
-    height: 200px; /* Keep the aspect ratio */
+    height: 200px; 
   }
 
   .no-results-p {
