@@ -4,7 +4,7 @@
 
 > A search engine utilizing 3 APIs (Wikipedia, GIPHY, NBA-rapid-api)
 
-### ✨ [Demo](https://search-mini.vercel.app/)
+### ✨ [Start Your Search Here](https://search-mini.vercel.app/)
 
 
 
