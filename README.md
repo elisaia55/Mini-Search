@@ -14,7 +14,7 @@
 
 * Website: http://aelisaia.io/
 * Github: [@elisaia55](https://github.com/elisaia55)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/augustinoelisaia\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/augustinoelisaia\/)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/augustinoelisaia\/](https://www.linkedin.com/in/augustinoelisaia/)
 
 
 
