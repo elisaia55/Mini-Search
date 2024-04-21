@@ -30,7 +30,11 @@
 .nav-title {
   display: flex;
   width: 150px;
-  color: var(--main_font_color);
+  background: var(--title_background_color);
+  background: var(--title_background_gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 
 .scroll-btn-container {

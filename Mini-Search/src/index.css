@@ -9,6 +9,11 @@
   --search_font_color: #005f87;
   --button_color: rgb(0, 0, 0);
   --button_font_color: rgba(255, 255, 255, 0.7);
+  --title_background_color:#FA5350;
+  --title_background_gradient: linear-gradient(to right, #FA5350 6%, #CF9436 100%);
+  --title_background_clip:-webkit-background-clip: text;
+  --title_text_fill: -webkit-text-fill-color: transparent;
+
 }
 
 [data-theme="dark"] {
@@ -22,6 +27,13 @@
   --search_font_color: #5f8787;
   --button_color: #fff;
   --button_font_color: rgba(0, 0, 0, 0.87);
+
+  --title_background_color:#50F7FA;
+  --title_background_gradient: linear-gradient(to right, #50F7FA 6%, #3671CF 100%);
+  --title_background_clip:-webkit-background-clip: text;
+  --title_text_fill: -webkit-text-fill-color: transparent;
+
+
 }
 
 * {
