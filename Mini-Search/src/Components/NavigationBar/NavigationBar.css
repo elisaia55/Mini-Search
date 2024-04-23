@@ -32,6 +32,7 @@
   width: 150px;
   background: var(--title_background_color);
   background: var(--title_background_gradient);
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   

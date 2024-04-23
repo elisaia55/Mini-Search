@@ -13,13 +13,13 @@ import { Stack } from "@mui/system";
 import "./UniversalSearch.css";
 
 function UniversalSearch() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [wikiResults, setWikiResults] = useState([]);
-  const [lastSearchQuery, setLastSearchQuery] = useState("");
   const [nbaResults, setNbaResults] = useState([]);
   const [giphyResults, setGiphyResults] = useState([]);
-  const [searchPerformed, setSearchPerformed] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [lastSearchQuery, setLastSearchQuery] = useState("");
   const [isBtnDisabled, setIsBtnDisabled] = useState(true)
+  const [searchPerformed, setSearchPerformed] = useState(false);
 
   // Wikipedia API Search Logic
   const wikiSearch = async () => {
@@ -204,15 +204,16 @@ function UniversalSearch() {
                 <InfoIcon fontSize="medium"></InfoIcon>Wikipedia
               </h2>
               <div className="wiki-results-container">
-                {wikiResults.slice(0, 13).map((item, index) => {
+                {wikiResults.slice(0, 13).map((item) => {
                   const wikiUrl = `https://en.wikipedia.org/?curid=${item.pageid}`;
                   return (
                     <a
                       href={wikiUrl}
                       target="__blank"
-                      rel="noopener noreferrer"
+                      rel="noreferrer"
+                      key={item.pageid}
                     >
-                      <div className="wiki-results" key={item.pageid}>
+                      <div className="wiki-results" >
                         <h3>{item.title}</h3>
                         <p
                           dangerouslySetInnerHTML={{ __html: item.snippet }}
@@ -232,12 +233,12 @@ function UniversalSearch() {
                 <GifIcon sx={{ fontSize: 40 }}></GifIcon>GIPHY
               </h2>
               <div className="giphy-results-container">
-                {giphyResults.map((item, index) => (
+                {giphyResults.map((item) => (
                   <div key={item.id}>
                     <a
                       href={item.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noreferrer"
                     >
                       <img
                         className="giphy-imgs"
@@ -260,7 +261,7 @@ function UniversalSearch() {
                 </h2>
                 <div className="results-container">
                   {nbaResults.length > 0 ? (
-                    nbaResults.slice(0, 10).map((player, index) => (
+                    nbaResults.slice(0, 10).map((player) => (
                       <div className="nba-results-container" key={player.id}>
                         <h3 className="nba-names">
                           {player.firstname} {player.lastname}

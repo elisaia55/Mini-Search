@@ -101,7 +101,7 @@ export default function ButtonAppBar() {
             <a
               href="https://github.com/elisaia55/Mini-Search"
               target="__blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               <GitHubIcon
                 style={{ color: "var(--button_color)" }}
