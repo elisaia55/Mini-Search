@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -18,7 +18,7 @@ function UniversalSearch() {
   const [giphyResults, setGiphyResults] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [lastSearchQuery, setLastSearchQuery] = useState("");
-  const [isBtnDisabled, setIsBtnDisabled] = useState(true)
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
   const [searchPerformed, setSearchPerformed] = useState(false);
 
   // Wikipedia API Search Logic
@@ -32,6 +32,7 @@ function UniversalSearch() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
+      console.table(data.query.search[0])
       setWikiResults(data.query.search);
     } catch (error) {
       console.error(`Error retrieving data: `, error);
@@ -98,22 +99,20 @@ function UniversalSearch() {
     setSearchPerformed(false);
   };
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange =  (e) => {
     let inpVal = e.target.value;
-    if (inpVal.startsWith(' ')) {
+    if (inpVal.startsWith(" ")) {
       inpVal = inpVal.trimStart();
     }
     setSearchQuery(inpVal);
-    setIsBtnDisabled(!inpVal.trim().length)
-  }
-  const handleKeyPress = (e) => {
+    setIsBtnDisabled(!inpVal.trim().length);
+  };
+  const handleKeyPress =  (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       searchAll();
     }
   };
-
-  
 
   return (
     <div className="page-container">
@@ -125,14 +124,12 @@ function UniversalSearch() {
               sx={{
                 width: 500,
                 maxWidth: "100%",
-                
               }}
               noValidate
               autoComplete="off"
             >
               <TextField
                 id="fullWidth"
-                sx={{}}
                 label="Search Here"
                 variant="standard"
                 type="text"
@@ -141,54 +138,53 @@ function UniversalSearch() {
                 onKeyPress={handleKeyPress}
                 fullWidth
               />
-              { searchQuery &&
-              <ClearIcon
-                sx={{ fontSize: 18 }}
-                className="clear-btn"
-                variant="contained"
-                onClick={clearClickAll}
-                style={{cursor: "pointer"}}
-                
-              /> }
+              {searchQuery && (
+                <ClearIcon
+                  sx={{ fontSize: 18 }}
+                  className="clear-btn"
+                  variant="contained"
+                  onClick={clearClickAll}
+                  style={{ cursor: "pointer" }}
+                />
+              )}
             </Box>
-          
 
-          <div className="btn-container">
-            <Box>
-            <Stack spacing={5} direction="row">
-      {searchQuery ? (
-        <Button
-          className="search-btn"
-          spacing={2}
-          variant="contained"
-          color="primary"
-          onClick={searchAll}
-          size="large"
-        >
-          Search
-        </Button>
-      ) : (
-        <Tooltip title="Search Field is Empty">
-          <span>
-            <Button
-              className="search-btn"
-              spacing={2}
-              variant="contained"
-              color="primary"
-              onClick={searchAll}
-              size="large"
-              disabled={!searchQuery || isBtnDisabled}
-            >
-              Search
-            </Button>
-          </span>
-        </Tooltip>
-      )}
-    </Stack>
-            </Box>
+            <div className="btn-container">
+              <Box>
+                <Stack spacing={5} direction="row">
+                  {searchQuery ? (
+                    <Button
+                      className="search-btn"
+                      spacing={2}
+                      variant="contained"
+                      color="primary"
+                      onClick={searchAll}
+                      size="large"
+                    >
+                      Search
+                    </Button>
+                  ) : (
+                    <Tooltip title="Search Field is Empty">
+                      <span>
+                        <Button
+                          className="search-btn"
+                          spacing={2}
+                          variant="contained"
+                          color="primary"
+                          onClick={searchAll}
+                          size="large"
+                          disabled={!searchQuery || isBtnDisabled}
+                        >
+                          Search
+                        </Button>
+                      </span>
+                    </Tooltip>
+                  )}
+                </Stack>
+              </Box>
+            </div>
           </div>
         </div>
-</div>
         {wikiResults[0]?.pageid === 59351 || wikiResults.length < 0 ? (
           <h2 className="no-results-p">
             <p>Sorry, No results found for </p>
@@ -213,7 +209,7 @@ function UniversalSearch() {
                       rel="noreferrer"
                       key={item.pageid}
                     >
-                      <div className="wiki-results" >
+                      <div className="wiki-results">
                         <h3>{item.title}</h3>
                         <p
                           dangerouslySetInnerHTML={{ __html: item.snippet }}
@@ -235,11 +231,7 @@ function UniversalSearch() {
               <div className="giphy-results-container">
                 {giphyResults.map((item) => (
                   <div key={item.id}>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <a href={item.url} target="_blank" rel="noreferrer">
                       <img
                         className="giphy-imgs"
                         src={item.images.fixed_height.url}
