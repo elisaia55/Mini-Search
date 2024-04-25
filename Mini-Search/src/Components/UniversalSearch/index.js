@@ -32,7 +32,7 @@ function UniversalSearch() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      console.table(data.query.search[0])
+      console.table(data.query.search[0]);
       setWikiResults(data.query.search);
     } catch (error) {
       console.error(`Error retrieving data: `, error);
@@ -99,7 +99,7 @@ function UniversalSearch() {
     setSearchPerformed(false);
   };
 
-  const handleSearchChange =  (e) => {
+  const handleSearchChange = (e) => {
     let inpVal = e.target.value;
     if (inpVal.startsWith(" ")) {
       inpVal = inpVal.trimStart();
@@ -107,7 +107,7 @@ function UniversalSearch() {
     setSearchQuery(inpVal);
     setIsBtnDisabled(!inpVal.trim().length);
   };
-  const handleKeyPress =  (e) => {
+  const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       searchAll();

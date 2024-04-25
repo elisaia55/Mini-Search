@@ -24,7 +24,6 @@ export default function ButtonAppBar() {
   };
 
   const colorSelected = localStorage.getItem("colorSelected");
-
   if (colorSelected === "dark") {
     setDarkMode();
   }
