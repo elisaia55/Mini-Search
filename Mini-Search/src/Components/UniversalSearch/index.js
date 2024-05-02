@@ -7,9 +7,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import ClearIcon from "@mui/icons-material/Clear";
 import { Tooltip } from "@mui/material";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
-
 import { Stack } from "@mui/system";
-
 import "./UniversalSearch.css";
 
 function UniversalSearch() {
